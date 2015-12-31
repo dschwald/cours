@@ -1,10 +1,3 @@
-/* 
-pour compiler: 
-gcc main.c
-pour executer: 
-./a.out
-*/
-
 #include <stdio.h>
 
 int main() {
