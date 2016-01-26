@@ -1,0 +1,136 @@
+
+
+La base : 
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Titre</title>
+    </head>
+
+    <body>
+    
+    </body>
+</html>
+
+Pour ajouter des commentaires qui n'apparaitront pas sur la page web : 
+
+<!-- Ceci est un commentaire -->
+Pour créer des paragraphes :
+
+<p>paragraphe</p>
+
+Pour aller à la ligne dans un paragraphe :
+
+<br /> se place à la fin de la ligne
+
+Les titres dans le paragraphe :
+
+<h1> </h1> : signifie « titre très important ». En général, on s'en sert pour afficher le titre de la page au début de celle-ci.
+<h2> </h2> : signifie « titre important ».
+<h3> </h3> : pareil, c'est un titre un peu moins important (on peut dire un « sous-titre » si vous voulez).
+<h4> </h4> : titre encore moins important.
+<h5> </h5> : titre pas important.
+<h6> </h6> : titre vraiment, mais alors là vraiment pas important du tout.
+Pour mettre du texte en italique :
+<em> </em>
+Pour mettre du texte en gras : 
+<strong> </strong>
+Pour surligner du texte :
+<mark> </mark>
+Pour créer une liste non ordonnée :
+<ul> puis <li>ce qu'on veut mettre devant cette puce</li> et ce autant de fois que l'on veut de puces puis </ul> à la fin de la liste on peut créer des puces à l'intérieur d'autres puces, il suffit de mettre <ul> </ul> dans <li> </li>
+Pour créer une liste ordonnée :
+<ol> </ol> à la place de ul, le reste fonctionne pareil
+Pour créer un lien vers un autre site :
+<a href adresse du site + son nom </a>
+ex : <a href="https://openclassrooms.com">OpenClassrooms</a>
+si l'adresse comporte un & il faut rajouter amp : &amp pour que ça fonctionne correctement
+Pour créer un lien vers une autre page de son site (pas encore d'adresse http) qui se trouve dans le même dossier :
+<a href=”nom de la page.html”>nom de la page</a> 
+Si la page se trouve dans un dossier ou sous-dossier : 
+<a href=”nom dossier ou sous dossier/page 2.html”>nom de la page</a>
+S'il y avait plusieurs sous-dossiers :
+<a href=”dossier/autre dossier/autre dossier/page2.html”>nom de la page</a>
+Si le fichier (page) se trouve plus haut dans l'arborescence :
+<a href=”../page2.html>nom de la page</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Créer une ancre sur la même page :
+mettre id avant le nom de l'ancre ex : <h2 id="mon_ancre">Titre</h2>
+puis rajouter un # à l'attribut href ex : <a href="#mon_ancre">Aller vers l'ancre</a>
+Créer une ancre qui renvoie à une autre page :
+il faut taper le nom de la page et ajouter # avant de noter le nom de l'ancre 
+ex : <a href="page1.html#nom de l'ancre">
+
+Créer un lien qui affiche une infobulle au survol :
+il faut utiliser l'attribut title ex : <p>Bonjour. Souhaitez-vous visiter <a href="https://openclassrooms.com" title="Vous ne le regretterez pas !">OpenClassrooms</a> ?</p>
+
+Créer un lien pour envoyer un email :
+il faut ajouter mailto après href ex : <p><a href="mailto:votrenom@bidule.com">Envoyez-moi un e-mail !</a></p>
+
+Créer un lien pour télécharger un fichier :
+il faut placer ce fichier dans le même dossier que la page web et faire un lien
+ex : <p><a href="monfichier.zip">Télécharger le fichier</a></p>
+
+Format des images : 
+JPEG = format pour les photos
+PNG 8bits = image 256 couleurs
+PNG 24bits = image 16 millions de couleurs
+GIF = pour des images animées
+
+Enregistrer les noms des images en minuscule sans accent, sans espace, utiliser _ pour remplacer les espaces
+ Pour insérer une image : <img /> dans laquelle on met src puis on indique le chemin absolu ou le chemin relatif pour accéder à l'image et enfin src avec le nom descriptif de l'image. Le tout dans une balise de paragraphe.
+Ex : <p>
+    Voici une photo que j'ai prise lors de mes dernières vacances à la montagne :<br />
+    <img src="images/montagne.jpg" alt="Photo de montagne" />
+</p>
+Insérer une miniature cliquable : 
+
+Mettre la miniature et l'originale de l'image dans le même fichier.
+Ex du code à utiliser : 
+<p>
+    Vous souhaitez voir l'image dans sa taille d'origine ? Cliquez dessus !<br />
+    <a href="img/montagne.jpg"><img src="img/montagne_mini.jpg" alt="Photo de montagne" title="Cliquez pour agrandir" /></a>
+</p>
+
+Création d'une figure :
+
+On utilise la balise <figure> dans laquelle on met la balise d'insertion d'image <img src = “chemin vers l'image” alt=”nom de l'image” /> dans laquelle on insère la balise <figcaption> associée à une légende.
+Ex : <
+figure>
+    <img src="images/blocnotes.png" alt="Bloc-Notes" />
+    <figcaption>Le logiciel Bloc-Notes</figcaption>
+</figure>
+
+Dans le cas d'une figure, on peut mettre l'image en dehors d'une balise de paragraphe si elle apporte une information si c'est juste une image décorative elle va dans un paragraphe
+
+Une figure peut contenir plusieurs images :
+<figure>
+    <img src="images/internetexplorer.png" alt="Logo Internet Explorer" />
+    <img src="images/firefox.png" alt="Logo Mozilla Firefox" />
+    <img src="images/chrome.png" alt="Logo Google Chrome" />
+    <figcaption>Logos des différents navigateurs</figcaption>
+</figure>
+
