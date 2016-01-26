@@ -1,6 +1,6 @@
 
 
-flèche haut pour remonter dans l'historique des commandes
+*flèche haut pour remonter dans l'historique des commandes*
 flèche bas pour descendre
 history pour avoir l'historique des commandes passées
 ctrl + R + une suite de lettres contenues dans une ancienne commandes pour retrouver toutes celles qui peuvent correspondre puis enter
