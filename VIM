@@ -1,0 +1,62 @@
+					VIM
+
+
+
+
+
+vim = ouvrir vim
+vim nom_fichier = ouvrir vim dans un fichier
+I = pour entrer du texte
+h, j, k, l = permet de se déplacer dans le texte en mode insertion
+0 = retour en début de ligne
+$ = aller en fin de ligne
+w = se déplacer de mot en mot dans le texte
+:w = enregistrer le fichier
+:w nom_fichier = si le fichier n'existait pas
+:q = quitter
+:wq = enregistrer et quitter
+x = effacer des lettres
+nombre x = effacer un nombre donné de lettres
+dd = supprimer une ligne
+nombre dd = supprimer un nombre donné de lignes
+dw = effacer un mot (si le curseur est en début de mot)
+nombre dw ou d nombre w = supprime un nombre donné de mots
+d0 = supprime du curseur jusqu'au début du mot
+d$ = supprime du curseur jusqu'à la fin du mot
+yy = copie la ligne actuelle
+yw = copie le mot
+y0, y$,.......
+p = colle le texte copié ou coupé (avec dd) sur la ligne suivant le curseur
+nombre p = permet de coller le texte un nombre donné de fois
+r = remplacer une lettre en se mettant sur la lettre que l'on veut remplacer et en ajoutant après r celle qui va être à la place
+R = permet de remplacer plusieurs lettres
+u = permet d'annuler la dernière opération
+nombre u = permet d'annuler un nombre donné d'opérations
+ctrl R = permet de répéter un changement
+nombre G = sauter à la ligne tant
+G = sauter à la dernière ligne
+gg = retourner à la première ligne
+/ mot = permet de rechercher un mot et de placer le curseur sur le premier de la série se trouvant dans le texte
+n = pour aller au prochain mot
+N = pour revenir à celui d'avant
+:s/ancien/nouveau = permet de remplacer un mot par un nouveau
+:s/ancien/nouveau/g = remplacer tous ces mots par le nouveau dans une même ligne
+:#,#s/ancien/nouveau/g = remplace toutes les occurences des ligne # à #
+:%s/ancien/nouveau/g = emplace toutes les occurences dans tout le fichier
+:r nom_fichier = permet d'insérer un fichier dans le fichier sur lequel on travaille
+:sp = permet de scinder l'écran en deux horizontalement
+:sp nom_fichier = ouvrir un autre fichier dans la seconde partie
+:vsp = scinder verticalement
+ctrl w = navigue de viewport en viewport
+ctrl+w puis j (h, k, l) = déplacer le curseur d'un viewport à un autre suivant son emplacement
+ctrl+w + = permet d'agrandir le viewport actuel
+ctrl+w - = réduit le viewport actuel
+ctrl+w = = permet d'égaliser à nouveau la taille des viewports
+ctrl+w r = échanger la position des viewports
+ctrl+w R = échanger le sens inverse
+ctrl+w q = quitter le viewport actuel
+:! = permet de lancer des commandes traditionnelles du shell dans Vim
+: set option = pour lancer une option
+: set nooption = pour la désactiver
+: set option=valeur = pour activer certaines options qui nécessitent une valeur
+: set option? = pour connaître l'état d'une option
