@@ -1,0 +1,202 @@
+
+
+flèche haut pour remonter dans l'historique des commandes
+flèche bas pour descendre
+history pour avoir l'historique des commandes passées
+ctrl + R + une suite de lettres contenues dans une ancienne commandes pour retrouver toutes celles qui peuvent correspondre puis enter
+ctrl+ L pour effacer tout ce que contient la console ou CLEAR
+ctrl + D ferme la console ou EXIT
+shift + PgUp permet de remonter dans l'historique de la console
+shift + PgDown permet de descendre
+ctrl + A ou touche ORIGINE ramène le curseur au début de la commande
+ctrl + E ou touche FIN ramène le curseur à la fin de la ligne de commande
+ctrl + U efface tout ce qui se trouve à gauche du curseur qu'il n'y ai qu'un mot ou toute une ligne
+ctrl + K efface tout ce qui se trouve à droite du curseur, s'il se trouve en début de ligne, toute celle-ci sera effacée
+ctrl + W efface le premier mot situé à gauche du curseur
+ctrl + Y colle ce qui a été coupé en dernier avec le ctrl + U, K ou W
+
+commande pwd = affiche le dossier actuel
+ls = affiche la liste des dossiers
+ls -a = affiche la liste des dossiers ainsi que ceux qui sont cachés
+-F = affiche le type d'éléments (dossier, fichier,...)
+-l = liste détaillant chaque élément du dossier
+-h = affiche les tailles de fichiers de façon plus lisible
+-t = affiche les dossier par dernière date de modification (dernière en haut)
+-tr = dernière date en bas
+cd = changement de dossier
+cd .. = revenir en arrière
+cd seul ou ~ = revenir au dossier home
+du = taille qu'occupe le dossier 
+-a = all, affiche la taille des dossiers ainsi que des fichiers
+-s = avoir juste le total de l'espace occupé
+cat = permet d'afficher le contenu d'un dossier 
+cat – n = permet d'ajouter des numéros aux lignes du contenu du dossier  
+less = affiche le contenu du dossier page par page
+touche ESPACE permet de passer à la suite d'une page de console
+touche ENTER permet de faire défiler ligne par ligne ou touche flèche bas
+touche d permet d'afficher les onzes prochaines lignes soit un demi-écran
+b = retour en arrière d'un écran ou touche PAGE UP
+y ou touche flèche vers le bas = revient une ligne en arrière
+u = retour en arrière d'un demi écran
+q = arrête la lecture du fichier, met fin à la commande less
+= indique ou on se trouve dans le dossier, numéro des lignes affichées et pourcentage
+h = affiche l'aide, toutes les commandes, pour sortir taper q
+HEAD permet de n'afficher que le début du dossier 
+-n suivi d'un nombree = afficher ce nombre de lignes
+tail = permet d'afficher la fin du fichier, avec -n pour le nombre de lignes que l'on veut
+tail -f = permet de suivre l'évolution du fichier, les lignes d'écritures apparaissent au fur et à mesure
+ctrl + c = équivalent de ctrl + F4, permet d'arreter l'opération en cours
+tail -f -s + un nombre entier ou décimal avec . Permet d'afficher les changements toutes les tant secondes
+touch + nom d'un fichier = création de ce fichier
+pour que le nom du fichier comprenne un espace, on le note entre “”
+pour créer plusieurs fichiers ou dossiers en une fois, on les sépare par des espaces
+mkdir + nom de dossier = création de dossiers
+mkdir -p + nom de dossier/nom de sous dossier/nom de sous dossier = permet de tout créer en même temps
+cp + nom du fichier à copier + nom du fichier copie = création d'une copie de fichier au même endroit que le premier
+pour copier le dossier dans un autre endroit = cp nom du dossier endroit où l'on veut la copie, le dossier copié gardera le même nom
+cp nom du dossier nom de l'endroit où l'on veut la copie/nom du dossier copie = pour que le dossier soit copié ailleurs sous un autre nom
+cp -R + nom du dossier = copie du dossier et de tous les sous dossier qu'il contient, si on veut changer de nom la copie, on le met après le nom du dosier copié
+* ou joker (wildcard) = intégralité de ce que l'on y adjoint ex: cp *.jpg  + nom d'un dossier permet de copier toutes les images contenues dans ce dossier, cp so* + nom d'un dossier =  permet de copier tous les fichiers commençant par so dans le dossiers
+mv + nom d'un fichier + nom d'un dossier = déplacer ce fichier dans ce dossier
+mv + nom d'un dossier/ + nom d'un autre dossier = déplacer le premier dans le second
+pour renommer un fichier = mv + nom du fichier + nouveau nom du fichier
+pour renommer un fichier et le déplacer = mv + nom du fichier/nom du dossier où on veut le déplacer + nouveau nom du fichier
+rm + nom du fichier que l'on veut supprimer = supprimer un fichier 
+pour supprimer plusieurs fichiers  = rm + chacun de leurs noms à la suite avec espace
+rm -i = demander une confirmation de suppression
+rm -f = force la suppression quoi qu'il arrive
+-v = pour que la commande dise ce qu'elle est en train de faire, utile dans les cas où la commande prend du temps, afin de savoir où on en est
+-r = permet de supprmer un dossier et tout ce qu'il contient
+rm -r + nom de dossier = supprime tout
+rmdir = supprime le dossier uniquement s'il est vide
+ln + nom d'un fichier + nom d'un autre fichier = permet de créer un lien entre les deux
+chmod + chiffre + nom de dossier ou fichier = permet de changer les autorisations des utilisateurs pour ce dossier ou fichier
+chmod -R +chiffre + nom de dossier = le changement d'autorisation vaut pour tout ce qui est contenu dans ce dossiers
+pour désinstaller un paquet = apt-get remove + nom du paquet
+pour désinstaller le paquet et ses dépendances = apt-get autoremove + nom du paquet
+apt-get update= mettre à jour les paquets de l'ordi
+apt-cache search + nom du paquet = rechercher dans la liste des paquets
+apt-get install + nom du paquet = installer
+apt-get upgrade = mettre à jour tous les paquets installés dans l'ordi
+locate + nom de ce que l'on chercher = recherche istantanée
+grep + nom de ce que l'on veut filtrer + nom du domaine à filtrer = fera ressortir toutes les lignes qui contiennent ce mot
+grep -i = obtenir la même chose qu'il y ai des majuscules ou des minuscules dans le mot
+grep -v = commande inverse toutes les lignes qui n'ont pas ce mot
+grep -r (ou rgrep) + nom recherché + nom de répertoire = recherche dans tous les fichiers et sous-dossiers de ce répertoire
+sort + nom d'un fichier = trier le contenu de ce fichier
+sort-o + nom de fichier du résultat + nom du fichier à trier = affiche le résultat du trie dans un fichier à part
+-r = permet d'inverser l'ordre du tri
+-R = trier aléatoirement
+-n = permet de trier les nombres
+wc + nom du fichier ou autre = permet de donner le nombre de mot, de lignes et d'octet
+wc -l = uniquement le nombre de lignes
+wc -w = uniquement le nombre de mots
+wc -o = uniquement le nombre d'octets
+wc -m = uniquement le nombre de caractères
+uniq + nom de fichier = permet d'éliminer les lignes en doublon présentent dans le texte, uniquement s'il a été trié avant et que les lignes se suivent
+uniq -c = affiche le nombre de fois où chaque ligne était présente
+uniq -d = affiche uniquement les lignes qui étaient en doublon
+> = permet de rediriger les résultats d'une commande à un autre endroit que la console 
+>> = redirige le résultat à la fin d'un fichier et le crée s'il n'existait pas
+2> et 2>> = permet de rediriger les erreurs vers un autre fichier que les résultats
+2>&1 = redirige les erreurs dans le même fichier que le résultat de la commande
+< = permet de lire les données depuis un fichier pour les envoyer à la commande
+<< = permet de lire les données depuis le clavier
+| = permet de combiner les commandes 1 puis 2 puis 3....
+sudo halt = commande l'arrêt immédiat de l'ordinateur
+sudo reboot = permet le redémarrage de l'ordi
+& a la fin d'une commande permet de faire effectuer cette commande en toile de fond et de faire autre chose en même temps
+nohup en début de commande et combiné à & en fin de celle-ci permet d'effectuer la commande en toile de fond et qu'elle se poursuive même si on ferme la console
+ctrl + z = permet de mettre un programme long en pause et de reprendre la main sur la console
+bg = permet de passer la commande en arrière plan afin de pouvoir se servir de la console
+jobs = permet de savoir quels sont les processus qui tournent en toile de fond
+fg = permet de reprendre un processus qui tournait en fond au premier plan
+fg + % + numéro du precessus s'ils y en a plusieurs qui tourent
+screen permet d'ouvrir un deuxième écran de console
+dans screen ctrl + a suivi de S = permet de scinder la console en 2, si opération renouvelée, la console sera scindée en 3, en 4, ….
+ctrl a + tab pour passer d'une partie de console à une autre
+ctrl a + X = permet de fermer les fenêtres ouvertes dans screen
+ctrl a + d = permet de se détacher de screen pour revenir à la console principale sans toutefois fermer screen qui continue de tourner
+screen -r = permet de revenir sur screen
+screen -ls = permet d'afficher la liste des screens en train de tourner
+at HH:MM MM/DD/YY = permet de programmer une tâche pour une heure en particulier, préciser ensuite la commande à effectuer et finir par ctrl D 
+at now +tant minutes ou hours ou weeks ou autre = permet de différer la tâche à réaliser d'autant
+atq = permet d'avoir la liste des jobs en attente
+atrm + n° job = permet de supprimer ce job
+sleep entre ; entre deux commandes permet de faire une pause
+sleep + 5 = faire une pause de 5 secondes, on peut faire en m, en h ou en days
+remplacer les ; par des && = si la première commande ne s'éxecute pas, la suite s'arrêtera
+crontab -l = permet d'afficher la liste des commandes programmées
+crontab -e = permet d'ouvrir la crontab pour la modifier
+tar -cvf  nom_archive.tar nom_dossier = permet de créer une archive après avoir regroupé tous les fichiers dans un dossier afin de pouvoir le compresser
+tar -tf + nom de l'archive = permet d'afficher le contenu de l'archive sans l'extraire
+tar -rvf + nom archive.tar nom fichier supplémentaire = permet d'ajouter un fichier à l'archive déjà créée
+tar -xvf nom de l'archive = permet d'extraire les fichiers 
+gzip + nom de l'archive = permet de compresser l'archive
+gunzip + nom de l'archive compressée = permet de décompresser
+bzip2 + nom de l'archive = permet de compresser l'archive (plus long à réaliser mais plus efficace que gzip)
+bunzip2 + nom de l'arcchive compressée = permet de la décompresser
+tar -zcvf + nom de l'archive compressée (.tar.gz) + nom du dossier à archiver et compresser = permet d'archiver et compresser en une fois avec gzip
+tar -zxvf + nom de l'archive compressée = permet de la décompresser
+tar -jcvf + nom de l'archive compressée (.tar.bz2) + nom du dossier à archiver et compresser = permet d'archiver et compresser en une fois avec bzip2
+tar -jxvf + nom de l'archive compressée + nom du dossier = décompression
+tar -ztf + nom de l'archive = permet de voir son contenu (gzip)
+tar -jtf + nom de l'archive = permet de voir son contenu (bzip2)
+gzip + nom d'un fichier = permet de compresser directement un fichier
+zcat ou zmore ou zless + nom d'un fichier compressé = permet de lire ce fichier sans le décompresser
+=> si bug = taper reset puis enter puis à nouveau la commande zcat pour obtenir un fichier lisible
+unzip -l + nom de l'archive compressée (.zip) = permet de voir le contenu de l'archive avant de décompresser
+unzip + nom de l'archive = permet de décompresser un .zip
+unrar l + nom de l'archive compressée (.rar) = permet de lire le contenu sans décompresser
+unrar e + nom de l'arhive compressée = permet de décompresser un .rar
+sudo /etc/init.d/ssh start = permet de lancer le serveur ssh
+sudo /etc/init.d/ssh stop = permet de stoper le serveur ssh
+etc/ssh/ssh_config = permet de configurer le serveur ssh
+sudo /etc/init.d/ssh reload = permet de recharger le serveur ssh pour que les changements soient pris en compte
+ssh login@ip = permet de se connecter à sa console depuis un autre ordi
+logout ou ctrl D = permet de se déconnecter
+wget + adresse http ou ftp = permet de télécharger
+ctrl + c = permet d'arrêter le téléchargement 
+wget -c + adresse = permet de reprendre le téléchargement
+scp login@ip (de l'ordi depuis lequel on veut copier un fichier) + nom du fichier d'origine nomdu fichier de destination
+ftp + adresse d'un serveur = permet de se connecter à ce serveur
+put + nom du fichier = permet d'envoyer un fichier vers le serveur
+get + nom du fichier = permet de télécharger un fichier depuis ce serveur
+rajouter ! Devant une commande pour qu'elle s'exécute chez moi et pas sur le serveur
+rsync -arv dossier_a_sauvegarder nom_repertoire_de_sauvegarde = permet de sauvegarder un dossier dans un répertoire et de pouvoir par la suite réaliser des sauvegardes incrémentielles
+rm nom_dossier/nom_fichier_à_supprimer = permet de supprimer un fichier
+rsync -arv –delete nom_dossier (ou sa trouvait le fichier éliminé précédemment)/ nom_dossier (où avait été sauvegardé le fichier effacé) = permet de supprimer le fichier également dans la sauvegarde qui avait été effectuée
+rsync -arv –delete –backup –backup-dir=/home/login (doriane)/backups_supprimes nom_dossier (dans lequel le fichier à été supprimé)/ backups = permet d'envoyer les fichiers supprimés vers un dossier appelé backup
+rsync -arv –delete –backup –backup-dir=/home/doriane/fichier_supprime nom_dossier (ou se trouvait se fichier)/ doriane@IP du serveur
+host nom_d'hôte = permet d'obtenir l'IP et inversement
+ifconfig interface (eth0, wlan0, lo) etat (up pour activer ou down pour désactiver) = permet d'activer ou de désactiver les connexions au réseau
+netstat -i = permet d'afficher les statistiques réseaux, de voir leur utilisation
+netstat -uta = permet de lister toutes les connexions ouvertes
+netsat -ta = idem en plus light
+netstat -tan = idem mais seulement pour les numeros de ports
+netstat -lt = permet d'obtenir la liste de toutes les connexions en état LISTEN
+iptables -L = permet d'afficher les règles qui régissent le pare-feu
+iptables -F = permet de réinitialiser toutes les règles du pare-feu
+iptables -L –lines-numbers = permet d'ajouter les numéros des lignes de règles afin d'en avoir l'ordre
+tar zxvf nom_dossier_téléchargé.tar.gz = permet de décompresser ce fichier (il faut d'abord déplacer ce fichier téléchargé dans ~)
+ensuite cd nom_dossier_décompressé puis ./configure = permet d'aller dans ce dossier décompressé et de voir s'il manque des dépendances pour pouvoir l'installer 
+si message d'erreur, l'analyser, s'il manque des dépendances, les rechercher et les installer et refaire ./configure ensuite make pour lancer la compilation puis make install pour installer le programme (il vautt mieux être sudo su pour réaliser la manip)
+sudo make uninstall = permet de désinstaller ce programmer
+
+bash -x nom_fichier = permet d'afficher dans le shell le détail de l'exécution du script afin de retrouver la cause des erreurs
+echo = permet d'afficher dans la commande tous les paramètres qu'elle reçoit (les variables)
+echo -e “Message\nAutre ligne” = permet d'insérer des retours à la ligne
+echo $message = pour afficher dans la console le message
+“ “ = permet d'afficher le message et d'analyser et d'afficher une variable si le message en contient une
+' ' = permettent d'afficher un message simple sans variables
+` ` = permettent d'exécuter ce qui se trouve dans le message et d'afficher le résultat
+read -p 'message' = permet  d'afficher un message de prompt
+read -p 'message' -n X = permet de limiter le nombre de caractères de la réponse 
+-t = permet de limiter le temps de réponse
+-s = permet de ne pas afficher le texte saisi (ex: mot de passe)
+let = permet de rentrer des valeurs mathématiques
+tableau=('valeur0' 'valeur1' 'valeur2') = permet de créer une variable tableau qui conient 3 valeurs
+${tableau[2]}  = permet d'accéder à une case du tableau et d'en afficher la valeur
+tableau[2]='valeur2' = permet de définir manuel le contenu des cases du tableau
+${tableau[*]} = permet d'afficher l'ensemble du contenu du tableau
+
